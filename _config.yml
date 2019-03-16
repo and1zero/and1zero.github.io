@@ -1,6 +1,11 @@
-name: Andi Susanto
+name: and10
+title: and10
+description: 'Sometimes doing the wrong things for the right reasons'
+author: and1zero
 markdown: kramdown
-permalink:
-  - /blog/:year/:month/:day/:title
+permalinks:
   - /404.html
+  - /blog/:year/:month/:day/:title
 theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
