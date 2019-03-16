@@ -1,6 +1,6 @@
 name: Andi Susanto
 markdown: kramdown
-theme: jekyll-theme-cayman
 permalink:
   - /blog/:year/:month/:day/:title
   - /404.html
+theme: jekyll-theme-cayman
