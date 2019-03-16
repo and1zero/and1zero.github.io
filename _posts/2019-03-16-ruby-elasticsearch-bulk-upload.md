@@ -3,6 +3,8 @@ layout: post
 title: "Bulk Upload using Ruby Elasticsearch Gem"
 description: "Using Ruby Elasticsearch gem for the bulk actions might not be working when we are using the default configuration. This article will try to shed a light on that."
 date: 2019-03-16
+category: Tech
+tags: [elasticsearch, jenkins, ruby]
 ---
 
 ## Background

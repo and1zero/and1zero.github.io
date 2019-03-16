@@ -1,11 +1,57 @@
-name: and10
+# Site Info
 title: and10
+tagline: 'A Thoughtful Corner'
 description: 'Sometimes doing the wrong things for the right reasons'
-author: and1zero
-markdown: kramdown
-permalinks:
-  - /404.html
-  - /blog/:year/:month/:day/:title
-theme: jekyll-theme-cayman
+url: https://and1zero.github.io
+
+# Site Configurations
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+# About/contact
+author:
+  name: Andi Susanto
+  description: An eternal student
+  gravatar: 5e382ffbca80a385b3c7ef9917dfd9a2
+  url: https://and1zero.github.io
+  contact:
+    email: https://mailhide.io/e/oxS3l
+    github: https://github.com/and1zero
+    gitlab: https://gitlab.com/and1zero
+    linkedin: https://www.linkedin.com/in/andisusanto
+
+# Custom vars
+version: 1.0.0
+
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  Projects:
+    - https://github.com/and1zero
+    - { GitHub: 'https://github.com/and1zero' }
+    - { GitLab: 'https://gitlab.com/and1zero' }
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+# Plugins
+mathjax: false # whether support mathjax
+google_analytics_token: 'UA-36578544-2' # leave blank if you don't want google analytics
+disqus_short_name: 'and1zero' # leave blank if you don't want disqus
