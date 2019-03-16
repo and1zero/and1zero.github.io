@@ -8,6 +8,7 @@ url: https://and1zero.github.io
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 markdown: kramdown
 kramdown:
   input: GFM
