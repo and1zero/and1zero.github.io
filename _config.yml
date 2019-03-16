@@ -1,4 +1,6 @@
 name: Andi Susanto
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-cayman
+permalink:
+  - /blog/:year/:month/:day/:title
+  - /404.html
