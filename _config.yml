@@ -44,7 +44,7 @@ nav:
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
   Projects:
-    - https://github.com/and1zero
+    - '/projects/'
     - { GitHub: 'https://github.com/and1zero' }
     - { GitLab: 'https://gitlab.com/and1zero' }
 

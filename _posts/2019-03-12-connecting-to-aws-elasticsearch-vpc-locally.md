@@ -25,8 +25,9 @@ ssh -i ~/.ssh/id_rsa -N 9200:https://your-aws-vpc.us-east-1.es.amazonaws.com:443
 
 I stumbled upon [this post](https://www.jeremydaly.com/access-aws-vpc-based-elasticsearch-cluster-locally/) while trying to search for a more painless way to connect to the Elasticsearch cluster. In a nutshell, it's just as simple as:
 
-1. Add a configuration in your SSH config file (`~/.ssh.config`)
+1. Add a configuration in your SSH config file (`~/.ssh/config`):
 ```bash
+# ~/.ssh/config
 # Elasticsearch Tunnel
 Host estunnel
 HostName your-ec2-instance.us-east-1.amazonaws.com # your EC2 server's public IP address or host
@@ -42,6 +43,15 @@ $ ssh -N estunnel
 ```
 
 3. And now we can access the Elasticsearch cluster from **https://localhost:9200** in the browser, ignoring the SSL certificate warning.
+We can also access Kibana from the URL, just simply go to **https://localhost:9200/_plugin/kibana**.
+
+Sometimes when we are making any *POST* or *PUT* requests to **https://localhost:9200**, it will be rejected because it's violating the cross-origin.
+In order to prevent this, we can mock the Elasticsearch domain in `/etc/hosts` and add the following entry:
+```bash
+# /etc/hosts
+127.0.0.1 your-aws-vpc.us-east-1.es.amazonaws.com
+```
+And then you can retry the requests to **https://your-aws-vpc.us-east-1.es.amazonaws.com:9200** instead of localhost.
 
 ## Reference
 
