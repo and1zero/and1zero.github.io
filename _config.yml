@@ -1,8 +1,8 @@
 # Site Info
-title: and10
-tagline: 'A Thoughtful Corner'
-description: 'Sometimes doing the wrong things for the right reasons'
+title: and1zero
+description: 'Lesson Learned and Personal Thoughts'
 url: https://and1zero.github.io
+logo: /public/logo.svg
 
 # Site Configurations
 plugins:
@@ -23,14 +23,14 @@ permalink: pretty
 # About/contact
 author:
   name: Andi Susanto
-  description: An eternal student
+  description: A seeker of knowledge
   gravatar: 5e382ffbca80a385b3c7ef9917dfd9a2
   url: https://and1zero.github.io
   contact:
-    email: https://mailhide.io/e/oxS3l
+    linkedin: https://www.linkedin.com/in/andisusanto
     github: https://github.com/and1zero
     gitlab: https://gitlab.com/and1zero
-    linkedin: https://www.linkedin.com/in/andisusanto
+    email: https://mailhide.io/e/oxS3l
 
 # Custom vars
 version: 1.0.0

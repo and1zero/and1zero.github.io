@@ -17,6 +17,8 @@ I was tasked with doing some data transforming job which needs to be stored in a
 
 Seems very simple, right? So I am using the [elasticsearch-ruby](https://github.com/elastic/elasticsearch-ruby) gem in order to make life easier for the rest of us.
 
+<!-- more -->
+
 ## Why Using Ruby?
 
 Aside from just uploading the CSV file, we also need to run all kind of odd-jobs in the task, such as:
