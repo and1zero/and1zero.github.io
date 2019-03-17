@@ -43,10 +43,6 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  Projects:
-    - '/projects/'
-    - { GitHub: 'https://github.com/and1zero' }
-    - { GitLab: 'https://gitlab.com/and1zero' }
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
