@@ -7,8 +7,6 @@ category: Tech
 tags: [aws, elasticsearch, vpc]
 ---
 
-## Background
-
 Generally it is better to have an Elasticsearch cluster in AWS secured using VPC connection instead of open internet, instead of relying on bucket policy when accessing them.
 
 However, connecting them to our localhost is a bit complicated because we need to port-forward the connection. As a pre-requisite, we would need to connect through an EC2 instance in the same VPC with our Elasticsearch cluster.

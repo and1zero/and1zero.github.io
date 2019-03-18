@@ -7,8 +7,6 @@ category: Tech
 tags: [elasticsearch, jenkins, ruby]
 ---
 
-## Background
-
 I was tasked with doing some data transforming job which needs to be stored in an Elasticsearch cluster. The gist of the job is very simple:
 
 1. Do a massive query which will return a CSV file roughly 3GB.
@@ -29,7 +27,7 @@ Aside from just uploading the CSV file, we also need to run all kind of odd-jobs
 
 All these are running in `jenkins` using `docker`. The `docker` part will be important in the upcoming section.
 
-## The Problem
+## Problem
 
 Aside from the runs locally, we never observed any successful run when we are using Elasticsearch's [bulk](https://github.com/elastic/elasticsearch-ruby/blob/master/elasticsearch-api/lib/elasticsearch/api/actions/bulk.rb) action inside Jenkins. What's even more frustrating, the error messages are different for every runs, such as:
 
@@ -47,10 +45,6 @@ Elasticsearch::Transport::Transport::Errors::BadRequest: [400] {"error":{"root_c
 ...
 ```
 
-Without anything in common. It was a very dark period in our office.
-
-## The Beacon of Light
-
 Until I ask one of my colleague on the fated day, he noticed that these build in `jenkins` will fail roughly at the same time. We deduced that it could be to `bulk` operation timeout which will cut the parameters that the gem send to the endpoint.
 
 Upon reading the gem's README more closely, I found this text under **Usage**:
@@ -59,7 +53,7 @@ Upon reading the gem's README more closely, I found this text under **Usage**:
 
 Oh boy, so that explains why the rake task ran successfully when it was executed out of docker containers.
 
-## The Solution
+## Solution
 
 It's simple. We just need to change the default HTTP library to something else.
 
