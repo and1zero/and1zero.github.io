@@ -51,4 +51,4 @@ category_page: '/blog/categories/'
 # Plugins
 mathjax: false # whether support mathjax
 google_analytics_token: 'UA-36578544-2' # leave blank if you don't want google analytics
-disqus_short_name: 'and1zero' # leave blank if you don't want disqus
+disqus_short_name: false # leave blank if you don't want disqus
