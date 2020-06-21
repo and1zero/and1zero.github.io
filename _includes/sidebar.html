@@ -6,14 +6,18 @@ styles, `#sidebar-checkbox` for behavior. -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
+      {% if site.author.gravatar %}
       <div class="sidebar-personal-info-section">
         <a href="https://gravatar.com/{{ site.author.gravatar }}">
           <img src="https://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=350" title="View on Gravatar" alt="View on Gravatar" />
         </a>
       </div>
+      {% endif %}
+      {% if site.author.description %}
       <div class="sidebar-personal-info-section">
         <p>{{ site.author.description }}</p>
       </div>
+      {% endif %}
       {% if site.author.contact %}
       {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}

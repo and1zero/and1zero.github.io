@@ -23,8 +23,6 @@ permalink: pretty
 # About/contact
 author:
   name: Andi Susanto
-  description: A curious person, always breaking things and try to fix them
-  gravatar: 5e382ffbca80a385b3c7ef9917dfd9a2
   url: https://and1zero.github.io
   contact:
     linkedin: https://www.linkedin.com/in/andisusanto
@@ -33,7 +31,7 @@ author:
     email: https://mailhide.io/e/oxS3l
 
 # Custom vars
-version: 1.0.0
+version: 1.0.1
 
 # Navigation (2nd level links supported)
 nav:
